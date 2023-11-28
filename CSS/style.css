@@ -1377,6 +1377,9 @@ footer {
     .subscribe > div button {
         width: 35%;
     }
+    .question-section {
+        gap: 7px;
+    }
     .end-part ul li {
         gap: 15px;
     }
