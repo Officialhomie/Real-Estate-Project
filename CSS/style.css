@@ -472,6 +472,18 @@ input {
     font-size: 16px;
 }
 
+.faq.active .answer-sect {
+    display: block;
+    transition: .5s;
+    height: 100px;
+}
+
+.faq.active .question-section i:nth-child(2) {
+    transform: rotate(180deg);
+}
+
+
+
 #six-6 {
     background: linear-gradient(rgba(0, 0, 0, 0.704), rgba(0, 0, 0, 0.704)),url(/IMAGES/new-home-keys-plan-table-with-defocused-couple.jpg);
     height: 75vh;
