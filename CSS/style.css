@@ -470,6 +470,7 @@ input {
 .answer-sect {
     display: none;
     font-size: 16px;
+    text-align: left;
 }
 
 .faq.active .answer-sect {
@@ -481,8 +482,6 @@ input {
 .faq.active .question-section i:nth-child(2) {
     transform: rotate(180deg);
 }
-
-
 
 #six-6 {
     background: linear-gradient(rgba(0, 0, 0, 0.704), rgba(0, 0, 0, 0.704)),url(/IMAGES/new-home-keys-plan-table-with-defocused-couple.jpg);
@@ -993,6 +992,9 @@ footer {
     .question-section {
         gap: 30px;
     }
+    .answer-sect {
+        font-size: 14px;
+    }
     #six-6 {
         padding: 50px;
         height: 55vh;
@@ -1164,9 +1166,15 @@ footer {
     .left-side-2-up p {
         width: 100%;    
     }
+    .answer-sect {
+        font-size: 13px;
+    }
+    .faq.active .answer-sect {
+        height: 50px;
+    }
     #six-6 {
         background: linear-gradient(rgba(0, 0, 0, 0.704), rgba(0, 0, 0, 0.704)),url(/IMAGES/new-home-keys-plan-table-with-defocused-couple.jpg);
-        height: 40vh;
+        height: 52vh;
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -1316,6 +1324,12 @@ footer {
         width: 23rem;
         height: 43rem;
     }
+    .answer-sect {
+        font-size: 13px;
+    }
+    .faq.active .answer-sect {
+        height: 70px;
+    }
     #six-6 {
         padding: 20px 20px;
         height: 67vh;
@@ -1411,6 +1425,12 @@ footer {
     }
     .question-section {
         gap: 8px;
+    }
+    .answer-sect {
+        font-size: 12px;
+    }
+    .faq.active .answer-sect {
+        height: 70px;
     }
     .img-holder {
         width: 21rem;
