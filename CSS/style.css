@@ -1360,13 +1360,49 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    .side-1 h1 {
+        font-size: 35px;
+    }
+    #section-1 .hero-image {
+        width: 21rem;
+        height: 37rem;
+    }
     .achievements {
         gap: 10px;
         margin-top: 30px;
     }
+    .piece {
+        width: 100%;
+        line-height: 1.2;
+    }
+    .piece i {
+        font-size: 20px;
+        color: var(--primarycolor);
+    } 
+    .piece h1 {
+        font-size: 25px;
+    }
+    .piece p {
+        font-size: 12px;
+    }
+    .five-img {
+        width: 21rem;
+        height: 37rem;
+    }
     #six-6 {
         padding: 20px 20px;
         height: 75vh;
+    }
+    .question-section h3 {
+        width: 100%;
+        font-size: 13px;
+    }
+    .question-section {
+        gap: 8px;
+    }
+    .img-holder {
+        width: 21rem;
+        height: 37rem;
     }
     .subscribe {
         width: 90%;
@@ -1376,9 +1412,6 @@ footer {
     }
     .subscribe > div button {
         width: 35%;
-    }
-    .question-section {
-        gap: 7px;
     }
     .end-part ul li {
         gap: 15px;
