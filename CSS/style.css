@@ -519,7 +519,7 @@ input {
 .six-grid-1 {
     display: flex;
     align-items: center;
-    gap: 170px;
+    gap: 180px;
     width: 90%;
 }
 
