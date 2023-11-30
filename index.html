@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="/CSS/owl.theme.default.min.css"> -->
     <link rel="stylesheet" href="/CSS/style.css">
     <title>REAL ESTATE BUILD</title>
 </head>
@@ -15,10 +18,10 @@
         <nav>
             <img src="/IMAGES/logo.png" alt="">
             <ul>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">RESIDENCIES</a></li>
-                <li><a href="#">OUR VALUE</a></li>
-                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#section-3">ABOUT US</a></li>
+                <li><a href="#four-4">RESIDENCIES</a></li>
+                <li><a href="#five-5">OUR VALUE</a></li>
+                <li><a href="#seven-7">CONTACT US</a></li>
                 <button class="btn"><a href="#">LOGIN</a></button>
             </ul>
 
@@ -33,7 +36,7 @@
             <div class="side-1">
                 <h1>Discover Most Suitable Property</h1>
                 <p>Find a variety of properties that suit you very easilty Forget all difficulties in finding a residence for you</p>
-                <div class="input-place">
+                <div data-aos="fade-right" class="input-place">
                     <i class="bi bi-geo-alt-fill"></i>
                     <input type="text" placeholder="Enter Location">
                     <button><a href="#">Search</a></button>
@@ -85,7 +88,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum, doloremque quaerat sit tempora eius est reiciendis accusamus magnam quae. Explicabo dolore officia, iure a ullam aliquam nemo excepturi, repellat. uod ut delectus ad tempora.</p>
 
                 <div class="inner-flex">
-                    <div class="flex">
+                    <div data-aos="fade-right" class="flex">
                         <div class="one">
                             <i class="bi bi-brightness-low-fill"></i>
                             <p>Certified Company</p>
@@ -93,7 +96,7 @@
                         <p>We'll generate a sitemap for your site, submit it to search engine is and track crawler access.</p>
                     </div>
 
-                    <div class="flex">
+                    <div data-aos="fade-left" class="flex">
                         <div class="one">
                             <i class="bi bi-hand-thumbs-up-fill"></i>
                             <p>HIghly Experienced</p>
@@ -111,37 +114,7 @@
             <h1>Popular Residencies</h1>
         </div>
 
-        <div class="slide-images">
-            <div class="slide-1">
-                <img src="/IMAGES/r1.png" alt="">
-                <div class="number">
-                    <i class="bi bi-currency-dollar"></i>
-                    <h2>66,353</h2>
-                </div>
-                <h1>Asatti Garden City</h1>
-                <p>Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat</p>
-            </div>
-
-            <!-- <div class="slide-1">
-                <img src="/IMAGES/r3.png" alt="">
-                <div class="number">
-                    <i class="bi bi-currency-dollar"></i>
-                    <h2>35,853</h2>
-                </div>
-                <h1>Citralang Puri Selang</h1>
-                <p>Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten</p>            
-            </div>
-
-            <div class="slide-1">
-                <img src="/IMAGES/r2.png" alt="">
-                <div class="number">
-                    <i class="bi bi-currency-dollar"></i>
-                    <h2>47,043</h2>
-                </div>
-                <h1>Alivia Priva Jardin</h1>
-                <p>Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta</p>            
-            </div>
-
+        <div class="slide-images owl-carousel">
             <div class="slide-1">
                 <img src="/IMAGES/r1.png" alt="">
                 <div class="number">
@@ -170,7 +143,37 @@
                 </div>
                 <h1>Alivia Priva Jardin</h1>
                 <p>Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta</p>            
-            </div> -->
+            </div>
+
+            <div class="slide-1">
+                <img src="/IMAGES/r1.png" alt="">
+                <div class="number">
+                    <i class="bi bi-currency-dollar"></i>
+                    <h2>66,353</h2>
+                </div>
+                <h1>Asatti Garden City</h1>
+                <p>Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat</p>
+            </div>
+
+            <div class="slide-1">
+                <img src="/IMAGES/r3.png" alt="">
+                <div class="number">
+                    <i class="bi bi-currency-dollar"></i>
+                    <h2>35,853</h2>
+                </div>
+                <h1>Citralang Puri Selang</h1>
+                <p>Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten</p>            
+            </div>
+
+            <div class="slide-1">
+                <img src="/IMAGES/r2.png" alt="">
+                <div class="number">
+                    <i class="bi bi-currency-dollar"></i>
+                    <h2>47,043</h2>
+                </div>
+                <h1>Alivia Priva Jardin</h1>
+                <p>Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta</p>            
+            </div>
         </div>
     </section>
 
@@ -187,7 +190,7 @@
             </div>
 
             <div class="left-side-2-down">
-                <div class="faq">
+                <div data-aos="fade-left" class="faq">
                     <div class="question-section">
                         <i class="bi bi-shield-check"></i>
                         <h3>Best interest rates on the market</h3>
@@ -199,7 +202,7 @@
                     </div>
                 </div>
 
-                <div class="faq">
+                <div data-aos="fade-right" class="faq">
                     <div class="question-section">
                         <i class="bi bi-x-circle-fill"></i>
                         <h3>Prevent unstable prices</h3>
@@ -211,7 +214,7 @@
                     </div>
                 </div>
 
-                <div class="faq">
+                <div data-aos="fade-left" class="faq">
                     <div class="question-section">
                         <i class="bi bi-file-bar-graph-fill"></i>
                         <h3>Best price on the market</h3>
@@ -278,7 +281,7 @@
             </div>
     
             <div class="call-chat">
-                <div class="call">
+                <div data-aos="fade-up-right" class="call">
                     <div>
                         <i class="bi bi-telephone-fill"></i>
                         <div>
@@ -289,7 +292,7 @@
                     <button><a href="#">Call Now</a></button>
                 </div>
                 
-                <div class="chat">
+                <div data-aos="fade-up-left" class="chat">
                     <div>
                         <i class="bi bi-chat-dots-fill"></i>
                         <div>
@@ -302,7 +305,7 @@
             </div>
 
             <div class="vc-message">
-                <div class="vc">
+                <div data-aos="fade-down-right" class="vc">
                     <div>
                         <i class="bi bi-camera-video-fill"></i>
                         <div>
@@ -313,7 +316,7 @@
                     <button><a href="#">Call Now</a></button>
                 </div>
 
-                <div class="message">
+                <div data-aos="fade-down-left" class="message">
                     <div>
                         <i class="bi bi-envelope"></i>
                         <div>
@@ -336,7 +339,7 @@
         <p>
             Subscribe and find super attractive price quotes from us. Find your residence soon
         </p>
-        <button><a href="#">Get Sarted</a></button>
+        <button><a data-aos="zoom-out" href="#">Get Sarted</a></button>
     </section>
 
     <section id="nine-9">
@@ -345,7 +348,7 @@
             <p>What our clients says about us</p>
         </div>
         
-        <div class="comments">
+        <div class="comments owl-carousel-1">
             <div class="clients">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem, excepturi facere magnam illum, at accusantium doloremque odio.</p>
                 <div class="cl-profile">
@@ -357,7 +360,7 @@
                 </div>
             </div>
 
-            <!-- <div class="clients">
+            <div class="clients">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem, excepturi facere magnam illum, at accusantium doloremque odio.</p>
                 <div class="cl-profile">
                     <img src="/IMAGES/ximg4.png.pagespeed.ic.a_8XrO14Zq.webp" alt="">
@@ -377,9 +380,9 @@
                         <p>Customer</p>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
-            <!-- <div class="clients">
+            <div class="clients">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem, excepturi facere magnam illum, at accusantium doloremque odio.</p>
                 <div class="cl-profile">
                     <img src="/IMAGES/ximg4.png.pagespeed.ic.a_8XrO14Zq.webp" alt="">
@@ -388,9 +391,9 @@
                         <p>Investor</p>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
-            <!-- <div class="clients">
+            <div class="clients">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem, excepturi facere magnam illum, at accusantium doloremque odio.</p>
                 <div class="cl-profile"v>
                     <img src="/IMAGES/ximg5.png.pagespeed.ic.iKALrqgltK.webp" alt="">
@@ -410,7 +413,7 @@
                         <p>Investor</p>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         
     </section>
@@ -446,6 +449,16 @@
             <p>© All rights reserved 2023</p>
         </div>
     </footer>
+
+
+    <script src="/JS/jquery.js"></script>
+    <script src="/JS/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="/JS/main.js"></script>
+
+
 </body>
 </html>

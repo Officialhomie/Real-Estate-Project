@@ -15,11 +15,21 @@
     --complementarycolor: #1F3E72;
     --dullgray: #8C8B8B;
     --borderoutline: #DCE9FF;
+    --hoverDownColor: #E7F0FF;
     --border: 1px solid #ededed;
     --box-shadow: 8px solid rgba(255, 255, 255, .12);
     --iconbackgroundcolor: #EEEEFF;
     --buttonbackground: #5A73D7;
     --shadow: 0px 23px 21px -8px rgba(136, 160, 255, .25);
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header {
+    background: #131110;
 }
 
 .bluryWhite {
@@ -32,14 +42,6 @@
     filter: blur(100px);
 }
 
-header {
-    background: #131110;
-}
-
-/* header nav {
-    background-attachment: fixed;
-} */
-
 nav {
     display: flex;
     align-items: center;
@@ -49,6 +51,8 @@ nav {
     z-index: 99;
     background-color: transparent;
     transition: .5s;
+    /* position: fixed; */
+    width: 100%;
 }
 
 nav i {
@@ -62,7 +66,8 @@ nav ul {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    /* display: none; */
+    transition: 0.5s;
+    animation: scroll 5s ease-in-out;
 }
 
 nav ul li {
@@ -96,7 +101,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 100px;
+    padding: 150px 100px 20px;
 }
 
 #section-1 .side-1 {
@@ -125,6 +130,7 @@ nav ul li a {
     border: 8px solid var(--borderoutline);
     object-fit: cover;
     overflow: hidden;
+    
 }
 
 .hero-image img{
@@ -222,6 +228,7 @@ input {
     flex-direction: column;
     padding: 20px 50px;
     line-height: 1.5;
+    scroll-behavior: smooth;
 }
 
 #section-3  h1 {
@@ -318,7 +325,10 @@ input {
 .slide-images {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
+    padding: 70px 0 0;
+    margin-bottom: 70px;
+    position: relative;
 }
 
 .slide-1 {
@@ -326,19 +336,23 @@ input {
     display: flex;
     flex-direction: column;
     margin: 20px 0px;
-    width: 335px;
+    width: 310px;
     transition: 0.5s;
+    border-radius: 5px;
+    /* border: 3px solid var(--borderoutline); */
 }
 
 .slide-1 img {
-    width: 300px;
+    width: 85%;
     align-items: center;
     text-align: center;
+    object-fit: cover;
 }
 
 .slide-1:hover {
     transform: scale(1.1);
     transition: 0.5s;
+    background: linear-gradient(to top, var(--hoverDownColor), #fff);
 }
 
 
@@ -364,8 +378,48 @@ input {
 
 .slide-1 p {
     margin: 8px 0px;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--dullgray);
+}
+
+.owl-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+.owl-prev, .owl-next {
+    color: #000;
+    padding: 6px 10px;
+    background-color: var(--borderoutline);
+    border: 2px solid var(--secondarycolor);
+    border-radius: 5px;
+    /* color: greenyellow; */
+}
+
+.owl-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-size: 20px;
+}
+
+.owl-dot{
+    background-color: var(--primarycolor);
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.owl-dot.active{
+    background-color: orange;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 50%;
 }
 
 #five-5 {
@@ -879,6 +933,10 @@ footer {
     background-color: #131110
 }
 
+#nine-9 .owl-carousel .owl-item img{
+    width: 20% !important;
+}
+
 @media screen and (max-width: 992px) {    
     nav {
         padding: 20px 30px;
@@ -896,7 +954,7 @@ footer {
         padding: 5px 20px; 
     }
     #section-1 {
-        padding: 20px 50px;
+        padding: 150px 50px 20px;
     }
     .side-1 h1 {
         font-size: 40px;
@@ -956,13 +1014,27 @@ footer {
         font-size: 35px;
     }
     .slide-images {
-        gap: 0px;
+        display: flex;
+        align-items: center;
+        padding: 70px 0 0;
+        margin-bottom: 70px;
+        position: relative;
+    }
+    .slide-1 {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+        width: 350px;
+        transition: 0.5s;
+        border-radius: 5px;
+        /* border: 3px solid var(--borderoutline); */
     }
     .slide-1 {
         width: 335px;
     }
     .slide-1 img {
-        width: 230px;
+        /* width: 230px; */
     }
     .number i {
         font-size: 20px;
@@ -1047,6 +1119,7 @@ footer {
    .comments {
         gap: 30px;
     }
+    
    .cl-profile {
         gap: 15px;
     }
@@ -1093,11 +1166,43 @@ footer {
         width: 90px;
     }
     nav ul {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+        width: 30%;
+        border-radius: 5px;
+        padding: 15px 0px;
+        position: fixed;
+        right: -300px;
+        top: 65px;
+        cursor: pointer;
+        box-shadow: 0 0 5px black;
     }
+
+    nav.show-nav ul{
+        right: 30px;
+    }
+    nav ul li {
+        width: 80%;
+        transition: 0.2s;
+    }
+    nav ul li:hover {
+        transition: 0.2s;
+        border-bottom: 3px solid var(--buttonbackground);
+    }
+    
+    nav ul li a {
+        /* font-size: 20px; */
+        text-align: center;
+        color: #000;
+    } 
+
     #section-1 {
         flex-direction: column;
-        padding: 20px 30px;
+        padding: 100px 30px 20px;
     }
     .side-1 {
         width: 100%;
@@ -1133,14 +1238,11 @@ footer {
     .flex p {
         font-size: 13px;
     }
-    .slide-images {
-        gap: 0px;
-    }
     .slide-1 {
         width: 335px;
     }
     .slide-1 img {
-        width: 215px;
+        /* width: 215px; */
     }
     .number i, .number h2 {
         font-size: 17px;
@@ -1275,8 +1377,20 @@ footer {
     nav img {
         width: 120px;
     }
+
+    nav ul {
+        display: flex;
+        width: 35%;
+        gap: 10px;
+        right: -300px;
+        padding: 10px;
+    }
+    nav.show-nav ul{
+        right: 15px;
+    }
+
     #section-1 {
-        padding: 20px 20px;
+        padding: 100px 20px 20px;
         width: 100%;    
     }
     #section-1 .side-1 {
@@ -1298,9 +1412,9 @@ footer {
     #four-4 {
         padding: 20px;
     }
-    .slide-images {
+    /* .slide-images {
         width: 100%;
-    }
+    } */
     .slide-1 {
         width: 100%;
     }
@@ -1389,6 +1503,17 @@ footer {
     .side-1 h1 {
         font-size: 35px;
     }
+    nav ul {
+        display: flex;
+        width: 45%;
+        gap: 5px;
+        right: -300px;
+        padding: 10px;
+    }
+    nav.show-nav ul{
+        right: 15px;
+    }
+
     #section-1 .hero-image {
         width: 21rem;
         height: 37rem;
